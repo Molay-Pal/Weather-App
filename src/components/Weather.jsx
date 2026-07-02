@@ -131,7 +131,7 @@ function Weather() {
           className="location-btn"
           onClick={getCurrentLocationWeather}
         >
-         Current Location
+        <FaMapMarkerAlt/> Current Location
       </button>
 
       {
@@ -148,7 +148,7 @@ function Weather() {
           <h2>
             {weather.name}, {weather.sys.country}
           </h2>
-          <br />
+          {/* <br /> */}
           <p>
             Date: {new Date().toLocaleDateString()}
           </p>
@@ -176,70 +176,60 @@ function Weather() {
             <p>
               <WiThermometer size={35} />
               <strong>Feels Like</strong>
-              <br />
               {Math.round(weather.main.feels_like)}°C
             </p>
 
             <p>
               <WiHumidity size={35} />
               <strong>Humidity</strong>
-              <br />
               {weather.main.humidity}%
             </p>
 
             <p>
               <WiStrongWind size={35} />
               <strong>Wind Speed</strong>
-              <br />
               {weather.wind.speed} m/s
             </p>
 
             <p>
               <WiBarometer size={35} />
               <strong>Pressure</strong>
-              <br />
               {weather.main.pressure} hPa
             </p>
 
             <p>
               <FaTemperatureLow size={25} />
               <strong>Min Temp</strong>
-              <br />
               {Math.round(weather.main.temp_min)}°C
             </p>
 
             <p>
               <FaTemperatureHigh size={25} />
               <strong>Max Temp</strong>
-              <br />
               {Math.round(weather.main.temp_max)}°C
             </p>
 
             <p>
               <FaEye size={25} />
               <strong>Visibility</strong>
-              <br />
               {(weather.visibility / 1000).toFixed(1)} km
             </p>
 
             <p>
               <WiCloud size={35} />
               <strong>Clouds</strong>
-              <br />
               {weather.clouds.all}%
             </p>
 
             <p>
               <WiSunrise size={35} />
               <strong>Sunrise</strong>
-              <br />
               {new Date(weather.sys.sunrise * 1000).toLocaleTimeString()}
             </p>
 
             <p>
               <WiSunset size={35} />
               <strong>Sunset</strong>
-              <br />
               {new Date(weather.sys.sunset * 1000).toLocaleTimeString()}
             </p>
 

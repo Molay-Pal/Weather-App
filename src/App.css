@@ -68,7 +68,7 @@
     cursor:pointer;
     background:#2cdb55a7;
     color:white;
-    font-size:16px;
+    font-size:18px;
     transition:.3s;
 }
 
@@ -81,13 +81,14 @@
 }
 
 .weather-card img {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
 }
 
 .weather-card h1 {
   font-size: 3rem;
-  margin: 10px 0;
+  margin: 0;
+  /* margin: 10px 0; */
 }
 
 .weather-card h3 {
@@ -122,7 +123,7 @@
 
 .details svg {
     font-size: 38px;
-    margin-bottom: 8px;
+    /* margin-bottom: px; */
     color: #fff;
 }
 
